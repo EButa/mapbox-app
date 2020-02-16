@@ -1,5 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Map } from "./Map";
+import { MapProvider } from "./hooks/mapHook";
 
-ReactDOM.render(<Map />, document.getElementById("root"));
+ReactDOM.render(
+  <MapProvider>
+    <Map />
+  </MapProvider>,
+  document.getElementById("root")
+);
